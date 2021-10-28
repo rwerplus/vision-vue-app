@@ -1,8 +1,6 @@
 <template>
-  <h1>{{ msg }}</h1>
-  <h1>{{ labels }}</h1>
-  <button type="button" @click="count++">count is: {{ count }}</button>
-  $END$
+  <h1>132456798</h1>
+  <h1>{{hsk}}}</h1>
 </template>
 
 <script setup lang="ts">
@@ -20,7 +18,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  msg: 'hello',
+  hsk: 'hello',
   labels: () => ['one', 'two']
 })
 
