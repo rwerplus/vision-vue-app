@@ -1,4 +1,3 @@
-
 const forEach = (array: any, callBackIterate:any) => {
     let index = -1;
     const len = array.length;
