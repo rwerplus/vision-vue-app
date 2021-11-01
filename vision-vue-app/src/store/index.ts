@@ -1,7 +1,7 @@
 // store.ts
 // @ts-ignore
-import { InjectionKey } from 'vue'
-import { createStore, useStore as baseUseStore, Store } from 'vuex'
+import {InjectionKey} from 'vue'
+import {createStore, useStore as baseUseStore, Store, createLogger} from 'vuex'
 import {State} from './app/types'
 import state from './app/state'
 import {mutations} from "./app/mutations";
@@ -13,9 +13,11 @@ export const store = createStore<State>({
     state,
     mutations,
     actions,
+    plugins: [createLogger()],
+    strict: process.env.NODE_ENV !== 'production'
 })
 
 // 定义自己的 `useStore` 组合式函数
-export function useStore () {
+export function useStore() {
     return baseUseStore(key)
 }
