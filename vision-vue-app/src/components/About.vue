@@ -14,6 +14,7 @@ const count = ref(0)
 
 interface Props {
   msg?: string
+  hsk?: string
   labels?: string[]
 }
 
@@ -21,5 +22,4 @@ const props = withDefaults(defineProps<Props>(), {
   hsk: 'hello',
   labels: () => ['one', 'two']
 })
-
 </script>
