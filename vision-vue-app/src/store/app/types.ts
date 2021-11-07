@@ -1,0 +1,43 @@
+export interface State {
+    author: {
+        id: String
+    },
+    allNumbers: number,
+    authorInfo: object,
+    appGroup: object,
+    allModels: object,
+    appID: string,
+    cameraID: '',
+    role: object,
+    routers: Array<any>,
+    datasetGroup: Array<any>,
+    issueSiblings: Map<string, any>,
+    commonRouter: Array<any>,
+    levelsQuery: Array<any>,
+    xbQuery: Array<any>,
+    linesQuery: Array<any>,
+    nameQuery: Array<any>,
+    towersQuery: Array<any>,
+    directQuery: Array<any>,
+}
+
+export enum State_Mutation {
+    AUTHOR="AUTHOR",
+    allNumbers = "allNumbers",
+    authorInfo = "authorInfo",
+    // appGroup,
+    // allModels,
+    // appID,
+    // cameraID,
+    // role,
+    // routers,
+    // datasetGroup,
+    // issueSiblings,
+    // commonRouter,
+    // levelsQuery,
+    // xbQuery,
+    // linesQuery,
+    // nameQuery,
+    // towersQuery,
+    // directQuery,
+}

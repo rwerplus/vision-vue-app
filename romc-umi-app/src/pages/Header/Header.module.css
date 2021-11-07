@@ -1,0 +1,16 @@
+.nav-header {
+    font: 12px/1.5 "Microsoft yahei", arial, Simsun, sans-serif;
+    color: #333;
+    background: #F4F4F4;
+}
+.nav-header-cont {
+    position: relative;
+    z-index: 27;
+    height: 36px;
+}
+.icon {
+    color: #666;
+}
+.link {
+    cursor: pointer;
+}

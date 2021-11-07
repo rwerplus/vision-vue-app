@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+import {ref, defineEmits} from 'vue'
 /*
 * defineProps 或 defineEmits 只能是要么使用运行时声明，要么使用类型声明。同时使用两种声明方式会导致编译报错。
 * */
