@@ -8,11 +8,18 @@ export default (appInfo: EggAppInfo) => {
   config.keys = appInfo.name + '_1635385038584_8306';
 
   // add your egg config in here
-  config.middleware = ['robot'];
+  config.middleware = [ 'robot' ];
 
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
+  };
+  // configuration for session
+  config.session = {
+    key: 'PANG_SESS', // 设置Key的默认值
+    httpOnly: true, // 设置服务端操作
+    maxAge: 1000 * 60, // 设置最大有效时间
+    renew: true, // 页面有访问动作自动刷新session
   };
   /**
    * dump config
@@ -43,5 +50,5 @@ export default (appInfo: EggAppInfo) => {
   };
 };
 exports.robot = {
-  ua: [/Baiduspider/i],
+  ua: [ /Baiduspider/i ],
 };
