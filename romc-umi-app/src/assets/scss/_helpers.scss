@@ -1,0 +1,3 @@
+@function pxtorem($px) {
+  @return $px / 2420 * 100rem;
+}
