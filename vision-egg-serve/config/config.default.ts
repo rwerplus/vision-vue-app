@@ -7,12 +7,28 @@ export default (appInfo: EggAppInfo) => {
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1635385038584_8306';
 
-  // add your egg config in here
-  config.middleware = ['robot'];
-
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
+  };
+  // configuration for session
+  config.session = {
+    key: 'PANG_SESS', // 设置Key的默认值
+    httpOnly: true, // 设置服务端操作
+    maxAge: 1000 * 60, // 设置最大有效时间
+    renew: true, // 页面有访问动作自动刷新session
+  };
+  /**
+   * configuration from mysql
+   */
+  config.mysql = {
+    client: {
+      host: 'localhost',
+      port: '3306',
+      user: 'jZRR$Yr#w3',
+      password: 'ux95cQ23_1kr6Nfk8*^%mZXC',
+      database: 'user'
+    },
   };
   /**
    * dump config
@@ -36,12 +52,24 @@ export default (appInfo: EggAppInfo) => {
       /secret/i,
     ]),
   };
+
+  // add your egg config middleware in here
+  config.middleware = ['robot', 'gzip'];
+
+  config.robot = {
+    ua: [/Baiduspider/i],
+  };
+  config.gzip = {
+    threshold: 1024,
+    // match: '/upload'
+    match(ctx) {
+      const reg = /iphone|ipad|ipod/i;
+      return reg.test(ctx.get('user-agent'));
+    },
+  };
   // the return config will combines to EggAppConfig
   return {
     ...config,
     ...bizConfig,
   };
-};
-exports.robot = {
-  ua: [/Baiduspider/i],
 };

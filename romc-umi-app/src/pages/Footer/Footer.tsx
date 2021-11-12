@@ -1,9 +1,9 @@
 import {Space, Typography} from "antd";
 import React from "react";
-
+import './footer.scss';
 const Footer:React.FC = () => {
   return(
-      <div style={{textAlign: 'center',color: '#999',fontSize: '12px'}}>
+      <div className='footer'>
         <Space wrap={true}  direction="vertical">
           <Typography.Text>
             Copyright©1999-2021, ctrip.com. All rights reserved. | ICP证：沪B2-20050130 | 沪ICP备08023580号
