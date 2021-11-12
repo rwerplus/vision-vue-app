@@ -8,7 +8,6 @@
     "declarations": true
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-vision-egg-serve",
     "stop": "egg-scripts stop --title=egg-server-vision-egg-serve",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
@@ -19,7 +18,8 @@
     "ci": "npm run lint && npm run cov && npm run tsc",
     "autod": "autod",
     "lint": "eslint . --ext .ts",
-    "clean": "ets clean"
+    "clean": "ets clean",
+    "start": "egg-scripts start --daemon --title=egg-server-vision-egg-serve"
   },
   "dependencies": {
     "egg": "^2.6.1",
@@ -49,7 +49,9 @@
     "type": "git",
     "url": ""
   },
-  "eslintIgnore": ["coverage"],
+  "eslintIgnore": [
+    "coverage"
+  ],
   "author": "yoriKenny",
   "license": "MIT"
 }
