@@ -19,6 +19,18 @@ export default (appInfo: EggAppInfo) => {
     renew: true, // 页面有访问动作自动刷新session
   };
   /**
+   * configuration from mysql
+   */
+  config.mysql = {
+    client: {
+      host: 'localhost',
+      port: '3306',
+      user: 'jZRR$Yr#w3',
+      password: 'ux95cQ23_1kr6Nfk8*^%mZXC',
+      database: 'user'
+    },
+  };
+  /**
    * dump config
    *
    * It will ignore special keys when dumpConfig
@@ -42,10 +54,10 @@ export default (appInfo: EggAppInfo) => {
   };
 
   // add your egg config middleware in here
-  config.middleware = [ 'robot', 'gzip' ];
+  config.middleware = ['robot', 'gzip'];
 
   config.robot = {
-    ua: [ /Baiduspider/i ],
+    ua: [/Baiduspider/i],
   };
   config.gzip = {
     threshold: 1024,
