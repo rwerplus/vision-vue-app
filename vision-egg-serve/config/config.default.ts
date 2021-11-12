@@ -7,9 +7,6 @@ export default (appInfo: EggAppInfo) => {
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1635385038584_8306';
 
-  // add your egg config in here
-  config.middleware = [ 'robot' ];
-
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
@@ -43,12 +40,24 @@ export default (appInfo: EggAppInfo) => {
       /secret/i,
     ]),
   };
+
+  // add your egg config middleware in here
+  config.middleware = [ 'robot', 'gzip' ];
+
+  config.robot = {
+    ua: [ /Baiduspider/i ],
+  };
+  config.gzip = {
+    threshold: 1024,
+    // match: '/upload'
+    match(ctx) {
+      const reg = /iphone|ipad|ipod/i;
+      return reg.test(ctx.get('user-agent'));
+    },
+  };
   // the return config will combines to EggAppConfig
   return {
     ...config,
     ...bizConfig,
   };
-};
-exports.robot = {
-  ua: [ /Baiduspider/i ],
 };
