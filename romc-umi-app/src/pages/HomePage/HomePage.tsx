@@ -7,25 +7,24 @@ import { Button, Layout as LayoutComp } from "antd";
 import Layout from "../Layout/Layout";
 import { useAppStore, useUserStore } from '../../store';
 import { observer } from "mobx-react";
-import { useDerivationLoginAction } from '../../store/modules/user.store';
 
 const HomePage: React.FC = observer(() => {
 
   const { Footer, Content } = LayoutComp;
 
-  const { getUsername, setUsername, resetUsername } = useUserStore();
+  const { getUsername, setUsername, dispatchUsernameAction } = useUserStore();
+  const { dispatchStatusAction } = useAppStore();
+
 
   const appStore = useAppStore();
   return <div className={style.home}>
     {getUsername}
     <Button onClick={() => setUsername('xxx')} type="primary">Primary Button</Button>
-    <Button onClick={() => resetUsername()} type="primary">test arrow function</Button>
     <HeaderComp />
 
     {appStore.status}
-    <Button onClick={() => appStore.derivationStatusAction("error")} type="primary">test arrow function</Button>
-    <Button onClick={() => useDerivationLoginAction({username: "ssss",password: "123456"})} type="primary">login</Button>
-    
+    <Button type="primary" onClick={() => dispatchUsernameAction({ username: "ssss", password: "123456" }, dispatchStatusAction)}>login</Button>
+
 
     {/* <Content className={style.layout}>
       <Layout/>

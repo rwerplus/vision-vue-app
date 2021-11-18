@@ -1,12 +1,5 @@
 import axios from 'axios';
 
-export const login = (data: any) => axios.create({
-  method: 'POST',
-  data: data,
-  url: '/api/login'
-})
-export const getUserinfo = (data: any) => axios.create({
-  method: 'POST',
-  data: data,
-  url: '/api/userinfo'
-})
+export const login = (data: any) => axios.post('/api/login', data);
+
+export const getUserinfo = (data: any) => axios.post('/api/userinfo', data);

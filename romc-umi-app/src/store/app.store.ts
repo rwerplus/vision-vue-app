@@ -9,14 +9,14 @@ export class AppStore {
   constructor() {
     makeAutoObservable(this, {
       status: observable,
-      derivationStatusAction: action.bound,
+      dispatchStatusAction: action.bound,
       message: observable,
 
     });
   }
-  derivationStatusAction(payload: STATUS) {
+  dispatchStatusAction(payload: STATUS) {
     this.status = payload;
   }
 }
 
-export const SOTRE_APP = 'appStore';
+export const STORE_APP = 'appStore';

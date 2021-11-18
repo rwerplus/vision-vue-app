@@ -1,7 +1,7 @@
-import { SOTRE_APP, AppStore } from './app.store';
+import { STORE_APP, AppStore } from './app.store';
 import { createContext, useContext } from 'react';
 import { UserStore, STORE_USER } from './modules/user.store';
-import { configure } from 'mobx';
+import { configure, reaction } from 'mobx';
 
 configure({
   enforceActions: "always",
@@ -11,17 +11,22 @@ configure({
   disableErrorBoundaries: true
 })
 /**
+ * 
+ * 简化store之间的相关依赖
+ *callback实现Store之间的通信
+ */
+/**
  *
  * @returns 所有store实例
  */
 function createStores() {
   return {
-    [SOTRE_APP]: new AppStore(),
+    [STORE_APP]: new AppStore(),
     [STORE_USER]: new UserStore(),
   };
 }
 /**
- * @type 获取所有的store
+ * @rootStore 获取所有的store
  */
 export const rootStore = createStores();
 export const StoresContext = createContext(rootStore);
