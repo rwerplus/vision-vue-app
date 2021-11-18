@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HeaderComp from "../Header/Header";
 import FooterComp from "../Footer/Footer";
 import ContentComp from "../Content/Content";
@@ -8,10 +8,9 @@ import Layout from "../Layout/Layout";
 import { useAppStore, useUserStore } from '../../store';
 import { observer } from "mobx-react";
 import { useDerivationLoginAction } from '../../store/modules/user.store';
+import { useNavigate } from "react-router-dom";
 
 const HomePage: React.FC = observer(() => {
-
-  const { Footer, Content } = LayoutComp;
 
   const { getUsername, setUsername, resetUsername } = useUserStore();
 
