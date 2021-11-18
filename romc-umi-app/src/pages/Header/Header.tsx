@@ -2,14 +2,12 @@ import {Col, Row, Typography, Dropdown, Menu, Space, Divider} from "antd";
 import {CaretDownFilled, GlobalOutlined, MobileTwoTone, WechatFilled} from '@ant-design/icons'
 import React, {useState} from "react";
 import style from './Header.module.css'
-import { store } from '../../store/user.store';
-import { Observer,useLocalObservable } from 'mobx-react-lite';
+import { useUserStore } from '../../store';
+import { observer } from 'mobx-react';
 
-const HeaderComp: React.FC = () => {
-  const handleButtonClick = () => {
-
-  }
-  const userStore = useLocalObservable(() => store);
+const HeaderComp: React.FC = observer(() => {
+// const userStore = useLocalObservable(() => store);
+  const {getUsername,setUsername} = useUserStore();
   const [size, setSize] = useState(6);
   const menu = (
       <Menu>
@@ -45,12 +43,7 @@ const HeaderComp: React.FC = () => {
             <Col flex={12}>
               <Space split={<Divider type="vertical"/>} style={{justifyContent: 'flex-end',display: 'flex'}}>
                 <Typography.Link>
-                  <Observer>
-                    {
-                      () => <span onClick={ () => userStore.username = '123456'}>    请登录</span>
-                    }
-                  </Observer>
-              
+                  <span  onClick={() => setUsername('张三')}>    测试store</span>
                 </Typography.Link>
                 <Typography.Text>
                   免费注册
@@ -80,5 +73,5 @@ const HeaderComp: React.FC = () => {
         </div>
       </div>
   )
-}
+})
 export default HeaderComp;
