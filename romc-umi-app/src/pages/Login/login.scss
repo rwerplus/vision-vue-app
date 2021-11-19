@@ -1,0 +1,32 @@
+@import "../../assets/scss/_helpers.scss";
+
+.contentWrap {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../assets/images/login-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .formContainer {
+    flex: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(59, 75, 101, .5);
+    border-radius: pxtorem(18);
+
+    .formMaintain {
+      width: pxtorem(620);
+      height: pxtorem(800);
+      padding-top: pxtorem(120);
+      flex: 1;
+    }
+  }
+}
+
+.contentContainer {
+}
