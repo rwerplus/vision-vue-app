@@ -26,7 +26,7 @@ function createStores() {
   };
 }
 /**
- * @rootStore 获取所有的store
+ * @param {rootStore} 获取所有的store
  */
 export const rootStore = createStores();
 export const StoresContext = createContext(rootStore);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HeaderComp from "../Header/Header";
 import FooterComp from "../Footer/Footer";
 import ContentComp from "../Content/Content";
@@ -10,19 +10,15 @@ import { observer } from "mobx-react";
 
 const HomePage: React.FC = observer(() => {
 
-  const { Footer, Content } = LayoutComp;
-
   const { getUsername, setUsername, dispatchUsernameAction } = useUserStore();
-  const { dispatchStatusAction } = useAppStore();
 
-
-  const appStore = useAppStore();
+  const {dispatchStatusAction,status} = useAppStore();
   return <div className={style.home}>
     {getUsername}
     <Button onClick={() => setUsername('xxx')} type="primary">Primary Button</Button>
     <HeaderComp />
 
-    {appStore.status}
+    {status}
     <Button type="primary" onClick={() => dispatchUsernameAction({ username: "ssss", password: "123456" }, dispatchStatusAction)}>login</Button>
 
 
