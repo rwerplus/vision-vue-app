@@ -15,11 +15,10 @@ const App: React.FC = observer(() => {
           <div className={style.App}>
             <Routes key="123">
               <Route path="/" element={<Layout />}>
-                <Route path="home/*" element={<HomePage/>}/>
+                <Route path="home/*" element={<HomePage />} />
               </Route>
               <Route path="login" element={<LoginPage />} />
               <Route path="*" element={<NotFoundPage />} />
-
             </Routes>
           </div>
         </BrowserRouter>
