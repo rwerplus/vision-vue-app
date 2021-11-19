@@ -1,14 +1,13 @@
 import { STORE_APP, AppStore } from './app.store';
 import { createContext, useContext } from 'react';
 import { UserStore, STORE_USER } from './modules/user.store';
-import { configure, reaction } from 'mobx';
+import { configure } from 'mobx';
 
 configure({
   enforceActions: "always",
   computedRequiresReaction: true,
   reactionRequiresObservable: true,
   observableRequiresReaction: true,
-  disableErrorBoundaries: true
 })
 /**
  * 
