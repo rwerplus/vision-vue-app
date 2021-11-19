@@ -8,7 +8,7 @@ import Cookies from "js-cookie";
 
 const Layout:React.FC = () => {
   const token = Cookies.get("token");
-  console.log("123456",!token);
+  console.log("Access Denied!",!token);
   const nav = useNavigate();
 
   useEffect(() => {
