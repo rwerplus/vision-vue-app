@@ -1550,7 +1550,7 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
-"@pmmmwh/react-refresh-webpack-plugin@0.4.3":
+"@pmmmwh/react-refresh-webpack-plugin@0.4.3", "@pmmmwh/react-refresh-webpack-plugin@^0.4.3":
   version "0.4.3"
   resolved "https://registry.nlark.com/@pmmmwh/react-refresh-webpack-plugin/download/@pmmmwh/react-refresh-webpack-plugin-0.4.3.tgz#1eec460596d200c0236bf195b078a5d1df89b766"
   integrity sha1-HuxGBZbSAMAja/GVsHil0d+Jt2Y=
@@ -3902,6 +3902,14 @@ craco-alias@^3.0.1:
   version "3.0.1"
   resolved "https://registry.nlark.com/craco-alias/download/craco-alias-3.0.1.tgz#45e5cb338b222a7f62d17e398b54aff7cf1572af"
   integrity sha1-ReXLM4siKn9i0X45i1Sv988Vcq8=
+
+craco-fast-refresh@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.nlark.com/craco-fast-refresh/download/craco-fast-refresh-1.1.0.tgz#0e672ffb63b7428c8e79566e81d8107f10291ac6"
+  integrity sha1-Dmcv+2O3QoyOeVZugdgQfxApGsY=
+  dependencies:
+    "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
+    react-refresh "^0.10.0"
 
 craco-less@^1.20.0:
   version "1.20.0"
@@ -10295,6 +10303,11 @@ react-is@^17.0.1:
   version "17.0.2"
   resolved "https://registry.nlark.com/react-is/download/react-is-17.0.2.tgz?cache=0&sync_timestamp=1622647632908&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-is%2Fdownload%2Freact-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha1-5pHUqOnHiTZWVVOas3J2Kw77VPA=
+
+react-refresh@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.npmmirror.com/react-refresh/download/react-refresh-0.10.0.tgz?cache=0&sync_timestamp=1637254325789&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Freact-refresh%2Fdownload%2Freact-refresh-0.10.0.tgz#2f536c9660c0b9b1d500684d9e52a65e7404f7e3"
+  integrity sha1-L1NslmDAubHVAGhNnlKmXnQE9+M=
 
 react-refresh@^0.8.3:
   version "0.8.3"

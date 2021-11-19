@@ -57,6 +57,7 @@
   },
   "devDependencies": {
     "craco-alias": "^3.0.1",
+    "craco-fast-refresh": "^1.1.0",
     "http-proxy-middleware": "^2.0.1"
   }
 }
