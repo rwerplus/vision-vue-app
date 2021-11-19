@@ -1,3 +1,5 @@
+@import url("assets/scss/_helpers.scss");
+
 .contentWrap {
     width: 100vw;
     height: 100vh;
@@ -14,4 +16,8 @@
     justify-content: center;
     align-items: center;
     background-color: #3B4B65;
+}
+.formMaintain {
+    width: pxtorem(800);
+    height: pxtorem(400);
 }

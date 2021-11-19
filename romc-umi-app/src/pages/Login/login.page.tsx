@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Layout, Row } from 'antd';
-import style from './login.module.css';
+import './login.module.scss';
 import LoginFormComp from "@pages/Login/loginForm.comp";
 
 const LoginPage: React.FC = () => {
@@ -8,10 +8,10 @@ const LoginPage: React.FC = () => {
 
   return (
     <Layout>
-      <Content className={style.contentWrap}>
-        <Row justify="center" align="middle" className={style.formContainer}>
-          <Col span={6}>
-            <LoginFormComp/>
+      <Content className="contentWrap">
+        <Row justify="center" align="middle" className="formContainer">
+          <Col span={6} className={"formMaintain"}>
+            <LoginFormComp />
           </Col>
         </Row>
       </Content>
