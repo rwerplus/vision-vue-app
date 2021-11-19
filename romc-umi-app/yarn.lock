@@ -3898,6 +3898,11 @@ cosmiconfig@^7.0.1:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
+craco-alias@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.nlark.com/craco-alias/download/craco-alias-3.0.1.tgz#45e5cb338b222a7f62d17e398b54aff7cf1572af"
+  integrity sha1-ReXLM4siKn9i0X45i1Sv988Vcq8=
+
 craco-less@^1.20.0:
   version "1.20.0"
   resolved "https://registry.nlark.com/craco-less/download/craco-less-1.20.0.tgz#7f68679b84c7756f785f9c5ee4e4f795662acad1"

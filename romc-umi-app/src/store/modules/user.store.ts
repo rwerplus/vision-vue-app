@@ -1,5 +1,5 @@
-import { login } from '../../api/user.api';
-import { runInAction, makeAutoObservable, action, computed, reaction } from 'mobx';
+import { login } from '@/api/user.api';
+import { runInAction, makeAutoObservable, action, computed} from 'mobx';
 
 export interface UserInfo {
   username: string;
@@ -25,20 +25,20 @@ export class UserStore {
     this.username = username;
     console.log(this.username);
   };
-  
+
   /**
    *
    *
    * @param {UserInfo} payload 传入的用户信息
    * @param {Function} [cb] app中修改status的action
-   * @memberof UserStore
+   * @member UserStore
    */
   async dispatchUsernameAction(payload: UserInfo, cb?: Function) {
     cb && cb('pending');
     try {
       const response: any = await login(payload);
       console.log(response);
-      
+
       if (response.status === 200) {
         runInAction(() => {
           this.setUsername(response.username);
