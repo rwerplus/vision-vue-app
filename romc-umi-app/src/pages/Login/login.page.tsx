@@ -8,14 +8,12 @@ const LoginPage: React.FC = () => {
 
   return (
     <Layout>
-      <Content>
-        <div className={style.contentContainer}>
-          <Row justify="center" align="middle">
-            <Col span={6} className={style.formContainer}>
-              <LoginFormComp/>
-            </Col>
-          </Row>
-        </div>
+      <Content className={style.contentWrap}>
+        <Row justify="center" align="middle" className={style.formContainer}>
+          <Col span={6}>
+            <LoginFormComp/>
+          </Col>
+        </Row>
       </Content>
     </Layout>
   );

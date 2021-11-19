@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Checkbox, Form, Input } from "antd";
+import { LockOutlined, UserOutlined } from "@ant-design/icons";
 
 const LoginFormComp:React.FC = () => {
   const onFinish = (values: any) => {
@@ -11,39 +12,42 @@ const LoginFormComp:React.FC = () => {
   };
   return (
     <Form
-      name="basic"
-      labelCol={{ span: 8 }}
-      wrapperCol={{ span: 16 }}
+      name="normal_login"
+      className="login-form"
       initialValues={{ remember: true }}
       onFinish={onFinish}
-      size={"large"}
-      onFinishFailed={onFinishFailed}
-      autoComplete="off"
     >
       <Form.Item
-        label="Username"
         name="username"
-        rules={[ { required: true, message: 'Please input your username!' } ]}
+        rules={[{ required: true, message: 'Please input your Username!' }]}
       >
-        <Input/>
+        <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
       </Form.Item>
-
       <Form.Item
-        label="Password"
         name="password"
-        rules={[ { required: true, message: 'Please input your password!' } ]}
+        rules={[{ required: true, message: 'Please input your Password!' }]}
       >
-        <Input.Password/>
+        <Input
+          prefix={<LockOutlined className="site-form-item-icon" />}
+          type="password"
+          placeholder="Password"
+        />
+      </Form.Item>
+      <Form.Item>
+        <Form.Item name="remember" valuePropName="checked" noStyle>
+          <Checkbox>Remember me</Checkbox>
+        </Form.Item>
+
+        <a className="login-form-forgot" href="">
+          Forgot password
+        </a>
       </Form.Item>
 
-      <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
-        <Checkbox>Remember me</Checkbox>
-      </Form.Item>
-
-      <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-        <Button type="primary" htmlType="submit">
-          登录
+      <Form.Item>
+        <Button type="primary" htmlType="submit" className="login-form-button">
+          Log in
         </Button>
+        Or <a href="">register now!</a>
       </Form.Item>
     </Form>
   )
