@@ -2,6 +2,8 @@
 页面样式引入*/
 @import '~antd/dist/antd.css';
 @import "./assets/css/reset.css";
+@import '~antd/dist/antd.dark.css';
+@import '~antd/dist/antd.compact.css';
 #root {
   margin: 0 auto;
 }
