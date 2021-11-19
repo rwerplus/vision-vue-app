@@ -39,9 +39,6 @@ const CarouselComp: React.FC = () => {
             </h3>
           </div>
         </Carousel>
-        <div  style={{position: 'absolute',left: '174px',top: '47px',zIndex: 28}}>
-          <MenuNav/>
-        </div>
       </div>
   )
 }
