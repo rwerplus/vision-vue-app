@@ -1,0 +1,101 @@
+@import "../../assets/scss/_helpers.scss";
+
+$filer-color: rgb(255, 255, 255, .2);
+$max-width: 1920px;
+$max-height: 1080px;
+
+.content {
+  position: relative;
+}
+
+.wrapper {
+  position: fixed;
+  top: pxtorem(150);
+  right: pxtorem(150);
+  left: pxtorem(150);
+  bottom: pxtorem(150);
+  margin: auto;
+  background: rgb(248, 250, 251);
+  border-radius: pxtorem(35);
+  box-shadow: 0.2px 0px 3.6px rgba(0, 0, 0, 0.024),
+      0.5px 0px 10px rgba(0, 0, 0, 0.035),
+      1.2px 0px 24.1px rgba(0, 0, 0, 0.046),
+      4px 0px 80px rgba(0, 0, 0, 0.07)
+}
+
+.header {
+  background: rgb(248, 250, 251);
+  display: flex;
+  align-items: center;
+  color: #2599E7;
+  height: pxtorem(120);
+}
+
+.side {
+  background: rgb(248, 250, 251);
+
+}
+
+.ContentDAO {
+  background: rgb(9, 157, 231);
+  padding: pxtorem(50);
+
+  .row {
+    height: 100%;
+
+    .col {
+      height: 100%;
+    }
+  }
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  font-size: 36px;
+  vertical-align: baseline;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.contentWrap {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  background: rgba(255, 255, 255, 0.7);
+
+  &::before {
+    content: "";
+    //position: absolute;
+    //top: 15px;
+    //right: 15px;
+    //left: 15px;
+    //bottom: 15px;
+    //background: url(../../assets/images/img.png) 100% 100% / cover no-repeat;
+    ///* 新增filter属性 */
+    //filter: drop-shadow(0px 0px 2px #000) drop-shadow(0px 0px 5px #000) drop-shadow(0px 0px 5px #000) drop-shadow(0px 0px 5px #000);
+  }
+
+  .formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: pxtorem(12);
+    z-index: 1;
+    flex: 1;
+    filter: drop-shadow(0px 0px 5px $filer-color) drop-shadow(0px 0px 5px $filer-color) drop-shadow(0px 0px 5px $filer-color) drop-shadow(0px 0px 5px $filer-color);
+
+    .formMaintain {
+      width: 375px;
+      height: 667px;
+      background-color: $filer-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

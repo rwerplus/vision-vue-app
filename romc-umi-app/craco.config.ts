@@ -5,7 +5,7 @@ const CracoAlias = require("craco-alias");
 const fastRefreshCracoPlugin = require('craco-fast-refresh')
 const CircularDependencyPlugin = require('circular-dependency-plugin')
 const WebpackBar = require('webpackbar')
-/* craco.config.ts */
+/* craco.Config.ts */
 module.exports = {
   webpack: {
     //....
@@ -44,7 +44,7 @@ module.exports = {
         lessLoaderOptions: {
           lessOptions: {
             modifyVars: {
-              '@primary-color': '#1DA57A'
+              '@primary-color': '#55BAFD'
             },
             javascriptEnabled: true,
           },
