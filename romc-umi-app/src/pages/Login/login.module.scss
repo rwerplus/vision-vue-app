@@ -6,6 +6,10 @@ $max-height: 1080px;
 
 .content {
   position: relative;
+  background: rgb(237,242,247);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -17,12 +21,12 @@ $max-height: 1080px;
   margin: auto;
   background: rgb(248, 250, 251);
   border-radius: pxtorem(35);
-  box-shadow: 0.2px 0px 3.6px rgba(0, 0, 0, 0.024),
-      0.5px 0px 10px rgba(0, 0, 0, 0.035),
-      1.2px 0px 24.1px rgba(0, 0, 0, 0.046),
-      4px 0px 80px rgba(0, 0, 0, 0.07)
+  box-shadow:
+  0.2px 0px 3.6px rgba(0, 0, 0, 0.024),
+  0.5px 0px 10px rgba(0, 0, 0, 0.035),
+  1.2px 0px 24.1px rgba(0, 0, 0, 0.046),
+  4px 0px 80px rgba(0, 0, 0, 0.07)
 }
-
 .header {
   background: rgb(248, 250, 251);
   display: flex;
@@ -37,13 +41,15 @@ $max-height: 1080px;
 }
 
 .ContentDAO {
-  background: rgb(9, 157, 231);
-  padding: pxtorem(50);
+  background: rgb(248, 250, 251);
+  padding: pxtorem(120);
 
   .row {
+    width: 100%;
     height: 100%;
 
     .col {
+      width: pxtorem(600);
       height: 100%;
     }
   }
@@ -55,10 +61,35 @@ $max-height: 1080px;
   font-size: 36px;
   vertical-align: baseline;
 }
-
+.iconButton {
+  font-size: 36px;
+  display: inline-block;
+}
 .title {
   font-size: 24px;
 }
+
+.carousel {
+  width: pxtorem(1200);
+  height: pxtorem(600);
+  border-radius: pxtorem(18);
+  overflow: hidden;
+}
+
+.img {
+  width: pxtorem(1200);
+  height: pxtorem(600);
+  display: block;
+  margin: auto;
+  border-radius: pxtorem(18);
+
+}
+@media screen and (max-width:960px) {
+  .carousel{
+    display: none;
+  }
+}
+
 
 .contentWrap {
   width: 100vw;

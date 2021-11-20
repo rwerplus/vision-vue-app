@@ -1,6 +1,6 @@
 /*思源黑体-常规*/
 @font-face {
-    font-family: 'webfont';
+    font-family: 'appfont';
     font-display: swap;
     src: url('//at.alicdn.com/t/webfont_e39c90h7dc.eot'); /* IE9*/
     src: url('//at.alicdn.com/t/webfont_e39c90h7dc.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -12,7 +12,7 @@
 
 /*阿里巴巴-普惠体-Regular*/
 @font-face {
-    font-family: 'webfont-regular';
+    font-family: 'appfont-regular';
     font-display: swap;
     src: url('//at.alicdn.com/t/webfont_wejjvaazei.eot'); /* IE9*/
     src: url('//at.alicdn.com/t/webfont_wejjvaazei.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -23,7 +23,7 @@
 }
 /*思源黑体-极细 */
 @font-face {
-    font-family: 'webfont-thin';
+    font-family: 'appfont-thin';
     font-display: swap;
     src: url('//at.alicdn.com/t/webfont_vguuwzdt6s7.eot'); /* IE9*/
     src: url('//at.alicdn.com/t/webfont_vguuwzdt6s7.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -34,7 +34,7 @@
 }
 /*思源黑体-粗*/
 @font-face {
-    font-family: 'webfont-bold';
+    font-family: 'appfont-bold';
     font-display: swap;
     src: url('//at.alicdn.com/t/webfont_xdrojlhuh3.eot'); /* IE9*/
     src: url('//at.alicdn.com/t/webfont_xdrojlhuh3.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -45,7 +45,7 @@
 }
 /*思源黑体-超粗*/
 @font-face {
-    font-family: 'webfont-bolder';
+    font-family: 'appfont-bolder';
     font-display: swap;
     src: url('//at.alicdn.com/t/webfont_0ye518vtq6eh.eot'); /* IE9*/
     src: url('//at.alicdn.com/t/webfont_0ye518vtq6eh.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */

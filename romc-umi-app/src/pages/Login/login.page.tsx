@@ -1,21 +1,18 @@
-import React from 'react';
-import { Col, Layout, Row, Carousel } from 'antd';
+import React, { useState } from 'react';
+import { Col, Layout, Row, Carousel, Typography, Space, Button } from 'antd';
 import modules from './login.module.scss';
 import LoginFormComp from "@pages/Login/loginForm.comp";
-import { ImportOutlined } from "@ant-design/icons";
 import { IconFont } from "@/Config/icon";
+import { WechatOutlined } from "@ant-design/icons";
 
 const LoginPage: React.FC = () => {
-  const { Content, Header, Sider } = Layout;
-
-  const contentStyle = {
-    height: "60em",
-    width: "auto",
-    color: "#fff",
-    lineHeight: "160px",
-    TextAlign: "center" as string,
-    background: "#364d79",
-  };
+  const { Content } = Layout;
+  const [ imgState, setImgState ] = useState([
+    "https://images.pexels.com/photos/733856/pexels-photo-733856.jpeg?cs=srgb&dl=pexels-tirachard-kumtanom-733856.jpg&fm=jpg",
+    "https://images.pexels.com/photos/356043/pexels-photo-356043.jpeg?cs=srgb&dl=pexels-pixabay-356043.jpg&fm=jpg",
+    "https://images.pexels.com/photos/48770/business-time-clock-clocks-48770.jpeg?cs=srgb&dl=pexels-pixabay-48770.jpg&fm=jpg",
+  ]);
+  const { Text, Link } = Typography;
 
   return (
     <Content className={modules.content}>
@@ -27,19 +24,44 @@ const LoginPage: React.FC = () => {
         <Content className={modules.ContentDAO}>
           <Row className={modules.row} justify={"space-between"} wrap={false}>
             <Col className={modules.col} span={14.4}>
-              <Carousel effect="fade" autoplay>
-                <div>
-                  <h3 style={contentStyle}>1</h3>
-                </div>
-                <div>
-                  <h3 style={contentStyle}>2</h3>
-                </div>
-                <div>
-                  <h3 style={contentStyle}>3</h3>
-                </div>
+              {/*TODO: 屏幕尺寸变化是，页面不会随之变化*/}
+              <Carousel effect="fade" autoplay className={modules.carousel}>
+                {
+                  imgState.map((item) => {
+                    return (
+                      <img src={item} alt={""} className={modules.img}/>
+                    );
+                  })
+                }
               </Carousel>
-            </Col >
-            <Col className={modules.col} span={9.6}>321321</Col>
+            </Col>
+            <Col className={modules.col} span={9.6}>
+              <Row wrap={false}>
+                <Space direction="vertical" >
+                  <Col>
+                    <Typography.Title>Welcome Back:)</Typography.Title>
+                  </Col>
+                  <Col>
+                    <Text type="secondary">To keep connected with us please login with your personal information by account and password</Text>
+                  </Col>
+                  <Col>
+                    <LoginFormComp/>
+                  </Col>
+                  <Col>
+                    <Text type="secondary">Or you can login with</Text>
+                  </Col>
+                  <Col>
+                    <span className={modules.iconButton}>
+                      <Space>
+                      <IconFont type="iconweixin" className={modules.logo}/>
+                      <IconFont type="iconweixin" className={modules.logo}/>
+                      <IconFont type="iconweixin" className={modules.logo}/>
+                      </Space>
+                    </span>
+                  </Col>
+                </Space>
+              </Row>
+            </Col>
           </Row>
         </Content>
       </Layout>

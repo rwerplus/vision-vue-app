@@ -1,6 +1,7 @@
 import React from "react";
-import { Button, Checkbox, Form, Input } from "antd";
+import { Button, Checkbox, Form, Input, Space } from "antd";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
+import modules from './loginform.module.scss';
 
 const LoginFormComp: React.FC = () => {
   const onFinish = (values: any) => {
@@ -11,6 +12,7 @@ const LoginFormComp: React.FC = () => {
     <Form
       name="normal_login"
       className="login-form"
+      size="large"
       initialValues={{ remember: true }}
       onFinish={onFinish}
     >
@@ -18,7 +20,7 @@ const LoginFormComp: React.FC = () => {
         name="username"
         rules={[{ required: true, message: 'Please input your Username!' }]}
       >
-        <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
+        <Input prefix={<UserOutlined className="site-form-item-icon" />}  placeholder="Username" />
       </Form.Item>
       <Form.Item
         name="password"
@@ -37,9 +39,14 @@ const LoginFormComp: React.FC = () => {
       </Form.Item>
 
       <Form.Item>
-        <Button type="primary" block={true} htmlType="submit" className="login-form-button">
-          Log in
-        </Button>
+        <Space size={36}>
+          <Button shape="round" type="primary" block={true} htmlType="submit" className={modules["login-form-button"]}>
+            Login Now
+          </Button>
+          <Button shape="round" type="default"disabled block={true} htmlType="submit" className="login-form-button">
+            Create Account
+          </Button>
+        </Space>
       </Form.Item>
     </Form>
   )
