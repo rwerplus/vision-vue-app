@@ -8,7 +8,9 @@ module.exports = {
     domains: ['www.pexels.com'],
   },
   env: {
-    customKey: 'cbf51611-4cd3-11ec-a3bc-a31e20495f20',
+    appKey: 'cbf51611-4cd3-11ec-a3bc-a31e20495f20',
+    url: '',
+
   },
   async headers() {
     return [
