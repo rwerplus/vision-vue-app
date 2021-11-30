@@ -28,6 +28,13 @@
   resolved "https://registry.npmmirror.com/@babel/parser/download/@babel/parser-7.16.2.tgz#3723cd5c8d8773eef96ce57ea1d9b7faaccd12ac"
   integrity sha1-NyPNXI2Hc+75bOV+odm3+qzNEqw=
 
+"@babylonjs/core@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.npmmirror.com/@babylonjs/core/download/@babylonjs/core-4.2.0.tgz#d1cfd43d7e3d2e58cde79083f04eeb607f6c8f18"
+  integrity sha1-0c/UPX49LljN55CD8E7rYH9sjxg=
+  dependencies:
+    tslib ">=1.10.0"
+
 "@gar/promisify@^1.0.1":
   version "1.1.2"
   resolved "https://registry.nlark.com/@gar/promisify/download/@gar/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"
@@ -967,6 +974,18 @@ babel-code-frame@^6.22.0:
     chalk "^1.1.3"
     esutils "^2.0.2"
     js-tokens "^3.0.2"
+
+babylonjs-materials@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.npmmirror.com/babylonjs-materials/download/babylonjs-materials-4.2.0.tgz#d521f40dcab7a7f874147bdda86b566294fb0606"
+  integrity sha1-1SH0Dcq3p/h0FHvdqGtWYpT7BgY=
+  dependencies:
+    babylonjs "4.2.0"
+
+babylonjs@4.2.0, babylonjs@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.npmmirror.com/babylonjs/download/babylonjs-4.2.0.tgz#8f0d957a726de4c065904b14c2f413f455145d38"
+  integrity sha1-jw2VenJt5MBlkEsUwvQT9FUUXTg=
 
 balanced-match@^1.0.0:
   version "1.0.2"
@@ -6873,6 +6892,11 @@ ts-pnp@^1.1.6:
   version "1.2.0"
   resolved "https://registry.npm.taobao.org/ts-pnp/download/ts-pnp-1.2.0.tgz#a500ad084b0798f1c3071af391e65912c86bca92"
   integrity sha1-pQCtCEsHmPHDBxrzkeZZEshrypI=
+
+tslib@>=1.10.0:
+  version "2.3.1"
+  resolved "https://registry.nlark.com/tslib/download/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
+  integrity sha1-6KM1rdXOrlGqJh0ypJAVjvBC7wE=
 
 tslib@^1.8.0, tslib@^1.8.1:
   version "1.14.1"
