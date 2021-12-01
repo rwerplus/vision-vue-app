@@ -1,3 +1,5 @@
+#!/usr/bin/env ts-node
+
 import type { NextFetchEvent, NextRequest } from 'next/server';
 
 export function middleware(req: NextRequest, ev: NextFetchEvent) {
