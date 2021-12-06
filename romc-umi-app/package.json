@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
+    "@craco/craco": "^6.4.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -14,6 +15,8 @@
     "@types/react-dom": "^17.0.0",
     "antd": "^4.16.1",
     "axios": "^0.24.0",
+    "circular-dependency-plugin": "^5.2.2",
+    "craco-less": "^1.20.0",
     "i18next": "^20.3.1",
     "js-cookie": "^3.0.1",
     "mobx": "^6.3.7",
@@ -28,13 +31,13 @@
     "sass-loader": "^12.3.0",
     "typescript": "^4.1.2",
     "typescript-plugin-css-modules": "^3.3.0",
+    "webpackbar": "^5.0.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "set HTTPS=true&&craco start",
+    "craco-build": "craco start",
+    "craco-text": "craco text"
   },
   "eslintConfig": {
     "extends": [
@@ -55,6 +58,9 @@
     ]
   },
   "devDependencies": {
-    "http-proxy-middleware": "^2.0.1"
+    "craco-alias": "^3.0.1",
+    "craco-fast-refresh": "^1.1.0",
+    "http-proxy-middleware": "^2.0.1",
+    "simple-progress-webpack-plugin": "^2.0.0"
   }
 }

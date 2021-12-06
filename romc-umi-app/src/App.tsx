@@ -1,5 +1,5 @@
 import React from 'react';
-import HomePage from "./pages/HomePage/HomePage";
+import HomePage from "@/pages/HomePage/HomePage";
 import style from './App.module.css'
 import { observer, Provider } from 'mobx-react';
 import { rootStore, StoresContext } from './store';

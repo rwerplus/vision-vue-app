@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -11,28 +11,32 @@
     />
     <title>React App</title>
     <script>
-      const clientWidth = document.documentElement.clientWidth;
-      const clientHeight = document.documentElement.clientHeight;
-      const pageWidth =
-        clientWidth / clientHeight > 16 / 9
-          ? clientHeight * (16 / 9)
-          : clientWidth;
-      const pageH = pageWidth / (16 / 9);
-      const string = `<style>
+      const initFont = () => {
+        const clientWidth = document.documentElement.clientWidth;
+        const clientHeight = document.documentElement.clientHeight;
+        const pageWidth =
+                clientWidth / clientHeight > 16 / 9
+                        ? clientHeight * (16 / 9)
+                        : clientWidth;
+        const pageH = pageWidth / (16 / 9);
+        const string = `<style>
           html {
-            font-size: ${pageWidth / 100}px
+            font-size: ${pageWidth / 100}px !important
           }
         </style>`;
-      document.write(string);
+        document.write(string);
+      }
+      initFont()
+      window.onresize(() => {
+        initFont()
+      })
     </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script>
-      root.style.width = pageWidth + 'px';
-      root.style.height = pageH + 'px';
-      root.style.marginTop = (clientHeight - pageH) / 2 + 'px';
+      // root.style.marginTop = (clientHeight - pageH) / 2 + 'px';
     </script>
   </body>
 </html>

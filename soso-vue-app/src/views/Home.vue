@@ -1,11 +1,24 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <div>{{fps}}</div>
+    <Scene  @fps="fpsReceived"/>
   </div>
 </template>
 
-<script lang="ts" setup>
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+<script>
+import Scene from './Scene.vue'
+export default {
+  components: {Scene},
+  data() {
+    return {
+      fps: 0,
+    };
+  },
+  methods: {
+    fpsReceived(fps) {
+      this.fps = fps;
+    },
+  },
+}
 
 </script>
