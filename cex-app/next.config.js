@@ -30,6 +30,14 @@ module.exports = {
       ],
     }, ]
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/v2*',
+        destination: 'https://www.v2ex.com/api/v2/',
+      },
+    ]
+  },
   webpack: (config, {
     buildId,
     dev,

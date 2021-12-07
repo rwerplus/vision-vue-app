@@ -3,6 +3,7 @@ import { uuid } from 'vue-uuid';
 
 let BASE_URL = '';
 let HOST = process.env.NODE_ENV;
+
 switch (HOST) {
   case 'development':
     // BASE_URL = 'http://localhost:3000';
@@ -18,10 +19,10 @@ const getAuthorize = () => {
   if (typeof window !== 'undefined') {
     return sessionStorage.getItem('x-csrf-token') || '';
   } else {
-    return "";
+    return '';
   }
 };
-axios.create({
+const instance = axios.create({
   baseURL: BASE_URL,
   withCredentials: true,
   headers: {
@@ -31,7 +32,7 @@ axios.create({
 });
 
 //  request请求拦截器
-axios.interceptors.request.use(
+instance.interceptors.request.use(
   (config) => {
     if (config.data instanceof FormData) {
       //TODO FormData类型增加特别处理
@@ -51,7 +52,7 @@ axios.interceptors.request.use(
 );
 
 // response响应拦截器
-axios.interceptors.response.use(
+instance.interceptors.response.use(
   (response) => {
     return response;
   },
@@ -102,15 +103,16 @@ axios.interceptors.response.use(
       return Promise.reject(errormsg);
     } else {
       //服务器连结果都没有返回  有可能是断网或者服务器奔溃
-      if (window.navigator.onLine) {
-        //断网处理
-        return Promise.reject(error);
-      } else {
-        //服务器奔了
-        return Promise.reject(error);
+      if (typeof window !== 'undefined') {
+        if (window.navigator.onLine) {
+          //断网处理
+          return Promise.reject(error);
+        } else {
+          return Promise.reject(error);
+        }
       }
     }
   }
 );
 export const CancelToken = axios.CancelToken;
-export const _axios = axios;
+export const _axios = instance;

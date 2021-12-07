@@ -3,7 +3,7 @@ import { getNotificationV2EX } from './axios/request';
 
 interface Props {
   userAgent?: string;
-  latestReminder?: string,
+  latestReminder?: any,
 }
 
 const Login: NextPage<Props> = (props) => {
@@ -16,8 +16,13 @@ const Login: NextPage<Props> = (props) => {
 Login.getInitialProps = async ({ req }) => {
   console.log("req", req);
   const userAgent = req ? req.headers['user-agent'] : navigator.userAgent;
-  const latestReminder = await getNotificationV2EX();
-  return { userAgent, latestReminder };
+  try {
+    const latestReminder = await getNotificationV2EX();
+    return { userAgent, latestReminder };
+  } catch (e) {
+    console.log(e);
+    return { userAgent }
+  }
 };
 
 export default Login;
