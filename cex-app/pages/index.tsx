@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=optional" rel="stylesheet" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
       </Head>
       <>
         <Script id="google-analytics" src={`https://www.google-analytics.com/analytics.js`} />
@@ -26,10 +26,7 @@ const Home: NextPage = () => {
           <Link href="/">
             <a>Home</a>
           </Link>
-          <Link href={{
-            pathname: '/login',
-            query: { slug: "post.slug" },
-          }}>
+          <Link href={{pathname: '/login',query: { slug: "post.slug" },}}>
             <a>Home</a>
           </Link>
         </div>
