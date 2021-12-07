@@ -2,10 +2,21 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Script from 'next/script';
-import styles from '../styles/Home.module.css';
+import styles from 'scss/Home.module.css';
 import Link from 'next/link';
+import { useRouter } from 'next/dist/client/router';
+import { useEffect } from 'react';
 
 const Home: NextPage = () => {
+  const router = useRouter();
+  useEffect(() => {
+    // Always do navigations after the first render
+    router.push('/Login?slug=post.slug', undefined, { shallow: true })
+  }, [])
+
+  useEffect(() => {
+    // The counter changed!
+  }, [router.query.counter])
   return (
     <div className={styles.container}>
       <Head>
@@ -21,12 +32,13 @@ const Home: NextPage = () => {
       <>
         <Script id="google-analytics" src={`https://www.google-analytics.com/analytics.js`} />
       </>
+
       <main className={styles.main}>
         <div className={styles.grid}>
           <Link href="/">
             <a>Home</a>
           </Link>
-          <Link href={{pathname: '/login',query: { slug: "post.slug" },}}>
+          <Link href={{ pathname: '/Login', query: { slug: "post.slug" }, }}>
             <a>Home</a>
           </Link>
         </div>
