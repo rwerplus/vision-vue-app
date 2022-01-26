@@ -1,7 +1,5 @@
-@import "../../scss/_helpers.scss";
-
 .login-form-button {
-  width: pxtorem(300);
+  width: 300px;
 }
 
 .account {
@@ -18,8 +16,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: pxtorem(15) pxtorem(20);
-  padding-right: pxtorem(8);
+  padding: 15px 20px;
+  padding-right: 8px;
   background-color: rgb(236, 243, 245);
 }
 .formItem {
