@@ -1,0 +1,13 @@
+
+/*
+  页面公共尺寸计算公式
+*/
+@function pxtorem($px) {
+  @return $px / 2420 * 100rem;
+}
+
+@mixin play-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

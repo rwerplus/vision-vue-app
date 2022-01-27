@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>-mockplus-</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="实时监控/预警详情_未展开" transform="translate(-351.000000, -530.000000)">
+            <g id="播放" transform="translate(351.000000, 530.000000)" filter="url(#filter-1)">
+                <g>
+                    <rect id="Rectangle" fill="#000000" fill-rule="nonzero" opacity="0" x="0" y="0" width="20" height="20"></rect>
+                    <path d="M16.6582031,10.8203125 L5.16015625,17.1699219 C5.01367187,17.25 4.859375,17.2871094 4.70898437,17.2871094 C4.21875,17.2871094 3.76953125,16.8945312 3.76953125,16.3476562 L3.76953125,3.65039062 C3.76953125,3.10351562 4.21875,2.7109375 4.70898437,2.7109375 C4.859375,2.7109375 5.01367187,2.74804688 5.16015625,2.828125 L16.6582031,9.1796875 C17.3046875,9.53515625 17.3046875,10.4648438 16.6582031,10.8203125 Z" id="Path" fill="#000000" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
